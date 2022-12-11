@@ -1,0 +1,45 @@
+@import "../../styles/mixins";
+
+subtitle-common {
+  font-size: 1.2em;
+  padding-left: 2em;
+}
+
+.topbar {
+  height: 100%;
+  padding: 0 5rem;
+  background-color: var(--p-surface);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-size: 2em;
+    height: 1em;
+    font-style: italic;
+    font-weight: bold;
+  }
+
+  &__subtitle {
+    @extend subtitle-common;
+    transform: translateY(0px);
+    opacity: 1;
+    transition: ease-in-out 0.5s;
+
+    &__hidden {
+      @extend subtitle-common;
+      transform: translateY(10px);
+      opacity: 0;
+    }
+
+    @include respond(phone) {
+      font-size: 1em;
+    }
+  }
+}

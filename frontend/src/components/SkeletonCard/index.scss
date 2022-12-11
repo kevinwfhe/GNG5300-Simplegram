@@ -1,0 +1,13 @@
+.skeletonCard__wrapper {
+  & .Polaris-Card {
+    height: 100%;
+  }
+  & .Polaris-SkeletonThumbnail {
+    width: 100%;
+    height: 50%;
+  }
+  & .Polaris-SkeletonDisplayText__DisplayText,
+  & .Polaris-SkeletonBodyText {
+    margin: 1.2em;
+  }
+}

@@ -1,0 +1,54 @@
+:root {
+  --heart-regular: #cccccc;
+  --heart-solid: #f06292;
+}
+
+.heart__regular {
+  fill: transparent !important;
+  stroke: var(--heart-regular);
+  stroke-width: 20;
+  overflow: visible;
+  stroke-dashoffset: 0;
+  stroke-dasharray: 1550;
+
+  &:hover {
+    animation: stroke-animation ease-in-out 0.8s forwards;
+  }
+}
+
+.heart__solid {
+  animation: pop-animation ease-in-out 1s forwards;
+  fill: var(--heart-solid) !important;
+}
+
+@keyframes stroke-animation {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  30% {
+    stroke-dashoffset: 1550;
+  }
+  60% {
+    stroke-dashoffset: 3100;
+    stroke: var(--heart-solid);
+  }
+  90% {
+    transform: scale(1);
+  }
+  100% {
+    stroke-dashoffset: 3100;
+    stroke: var(--heart-solid);
+  }
+}
+
+@keyframes pop-animation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

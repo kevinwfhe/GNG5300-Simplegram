@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "simple-instagram"
+version = "0.1.0"
+description = ""
+authors = ["kevin-7755 <valarmorghulis_kh@outlook.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+django = "^4.1.3"
+graphene = "^3.1.1"
+graphene-django = "^3.0.0"
+django-graphql-jwt = "^0.3.4"
+django-storages = "^1.13.1"
+python-dotenv = "^0.21.0"
+pillow = "^9.3.0"
+boto3 = "^1.26.13"
+django-cors-headers = "^3.13.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

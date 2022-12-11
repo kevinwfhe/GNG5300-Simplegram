@@ -1,0 +1,28 @@
+@import "./components/index.scss";
+@import "./styles/mixins";
+
+.banner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    position: absolute;
+    color: #fff;
+    font-size: 3.6em;
+    font-weight: bold;
+
+    @include respond(phone) {
+      font-size: 1em;
+    }
+
+    @include respond(tab-port) {
+      font-size: 1.2em;
+    }
+  }
+
+  img {
+    width: 100%;
+  }
+}
