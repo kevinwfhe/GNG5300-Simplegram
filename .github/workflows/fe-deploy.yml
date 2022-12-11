@@ -43,6 +43,7 @@ jobs:
         # Build a docker container and
         # push it to ECR so that it can
         # be deployed to ECS.
+        cd frontend
         docker build -t $ECR_REPOSITORY .
         docker push $ECR_REPOSITORY:latest
         echo "::set-output name=image::$ECR_REPOSITORY:latest"
